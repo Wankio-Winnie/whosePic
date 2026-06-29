@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-neutral-50 text-neutral-900;
+  /* Vibrant gradient wash so the whole app feels colourful, not flat. */
+  background-image:
+    radial-gradient(900px 600px at 0% 0%, rgba(124, 45, 255, 0.24), transparent 55%),
+    radial-gradient(900px 600px at 100% 0%, rgba(224, 20, 140, 0.22), transparent 55%),
+    radial-gradient(1000px 700px at 50% 115%, rgba(0, 204, 154, 0.18), transparent 55%);
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply font-serif text-primary-900;
+}
+
+/* --- Landing-page mockup faces ---------------------------------------
+   Image references are centralized here so the mockup markup stays clean
+   and swapping a portrait is a one-line change. Files live in
+   /public/mockup/. */
+.mock-face {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.mock-face-1 {
+  background-image: url("/mockup/face-1.jpg");
+}
+.mock-face-2 {
+  background-image: url("/mockup/face-2.jpg");
+}
+.mock-face-3 {
+  background-image: url("/mockup/face-3.jpg");
+}
